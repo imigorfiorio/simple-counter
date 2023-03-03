@@ -39,6 +39,7 @@ html :focus-within {
 }
 
 body {
+  touch-action: manipulation;
   text-rendering: optimizeSpeed;
   text-align: center;
   font-family: 'IBM Plex Mono', monospace;
