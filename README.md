@@ -9,6 +9,7 @@
 È possibile anche salvare l'applicazione nella schermata home del proprio telefono ed usarla quando si preferisce.
 
 Link per provare il contatore: https://if-simple-counter.netlify.app
+
 ---
 
 It is a simple counter that allows you to raise or lower the number and, using a button, to restore it to its initial value.
