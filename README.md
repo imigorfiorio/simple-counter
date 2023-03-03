@@ -6,7 +6,8 @@
 - Decremento = `-`
 - Ripristino = `Enter`
 
-# Simple Counter
+---
+
 It is a simple counter that allows you to raise or lower the number and, using a button, to restore it to its initial value.
 
 You can interact with the application both via mouse and keyboard as follows:
