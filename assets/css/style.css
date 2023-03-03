@@ -1,0 +1,141 @@
+:root {
+  --black: #313131;
+  --white: #e2e2e2;
+  --accent: #ea6962;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+html ::-webkit-scrollbar {
+  display: none;
+}
+
+html :focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #171717;
+  color: var(--black);
+}
+
+@media screen and (max-width: 330px) {
+  body {
+    font-size: clamp(2rem, 3vw, 3rem);
+  }
+}
+
+@media screen and (max-height: 330px) {
+  body {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  display: grid;
+  row-gap: 0.3em;
+}
+
+.title {
+  padding: 0.2em;
+  border-radius: 15px 15px 0 0;
+  line-height: 1em;
+  font-weight: 700;
+  background-color: var(--white);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  column-gap: 0.3em;
+}
+
+button {
+  background: var(--white);
+  color: var(--black);
+  border: 5px solid var(--white);
+  padding: 0.2em;
+  line-height: 0.6em;
+
+  transition: 0.3s ease;
+}
+
+button:hover {
+  border: 5px solid var(--white);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.reset:hover {
+  border: 5px solid var(--accent);
+  color: var(--accent);
+}
+
+.counter {
+  background-color: var(--white);
+}
+
+.reset {
+  border: 5px solid var(--accent);
+  border-radius: 0 0 15px 15px;
+  background-color: var(--accent);
+}
+
+.author {
+  color: var(--white);
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+}
