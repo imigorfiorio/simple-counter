@@ -1,4 +1,6 @@
 # Simple Counter
+![simple-counter](https://user-images.githubusercontent.com/81391388/222890375-c70029c2-c2a1-4034-91fc-08a944c5af2a.jpeg)
+
 È un semplice contatore che permette di far salire o scendere il numero e, tramite un bottone, di ripristanarlo al suo valore iniziale.
 
 È possibile interagire con l'applicazione sia tramite mouse che tramite tastiera nel seguente modo:
