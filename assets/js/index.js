@@ -2,9 +2,9 @@ let container = document.querySelector('.container');
 let title = document.querySelector('.title');
 let wrapper = document.querySelector('.wrapper');
 
-let counter = document.createElement('div');
-counter.className = 'counter';
-counter.innerHTML = '0';
+let number = document.createElement('div');
+number.className = 'number';
+number.innerHTML = '0';
 
 let minus = document.createElement('button');
 minus.className = 'minus';
@@ -20,44 +20,48 @@ reset.innerHTML = 'RESET';
 
 let author = document.querySelector('.author');
 
-document.body.append(container, wrapper, minus, counter, plus, reset);
-container.append(title, wrapper, minus, counter, plus, reset, author);
-wrapper.append(minus, counter, plus);
+document.body.append(container, wrapper, minus, number, plus, reset);
+container.append(title, wrapper, minus, number, plus, reset, author);
+wrapper.append(minus, number, plus);
 
-let number = 0;
+let n = 0;
+
+function updateNumber(num) {
+  document.querySelector('.number').innerHTML = num;
+}
 
 minus.addEventListener('click', () => {
-  number--;
-  document.querySelector('.counter').innerHTML = number;
+  n--;
+  updateNumber(n);
 });
 
 plus.addEventListener('click', () => {
-  number++;
-  document.querySelector('.counter').innerHTML = number;
+  n++;
+  updateNumber(n);
 });
 
 reset.addEventListener('click', () => {
-  number = 0;
-  document.querySelector('.counter').innerHTML = number;
+  n = 0;
+  updateNumber(n);
 });
 
 document.addEventListener('keydown', function (event) {
   if (event.key === '-') {
-    number--;
-    document.querySelector('.counter').innerText = number;
+    n--;
+    updateNumber(n);
   }
 });
 
 document.addEventListener('keydown', function (event) {
   if (event.key === '+') {
-    number++;
-    document.querySelector('.counter').innerText = number;
+    n++;
+    updateNumber(n);
   }
 });
 
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Enter') {
-    number = 0;
-    document.querySelector('.counter').innerText = number;
+    n = 0;
+    updateNumber(n);
   }
 });

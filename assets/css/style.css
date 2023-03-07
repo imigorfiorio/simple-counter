@@ -126,7 +126,7 @@ button:hover {
   color: var(--accent);
 }
 
-.counter {
+.number {
   background-color: var(--white);
 }
 
